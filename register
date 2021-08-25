@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SkillTest | Registration</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Fontastic Custom icon font-->
+    
+    <!-- Google fonts - Roboto
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!-- jQuery Circle-->
+    <link rel="stylesheet" href="css/grasp_mobile_progress_circle-1.0.0.min.css">
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.premium.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+   
+   
+  </head>
+  <body>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+   <div ng-app="myApp" ng-controller="cntrl">
+    <div class="page login-page">
+      <div class="container">
+        <div class="form-outer  d-flex align-items-center" style="justify-content: center;">
+          <div class="form-inner">
+            <div class="logo text-uppercase text-center"><span>Skill</span><strong class="text-primary">Test</strong></div>
+            <p>Create New account</p>
+			<form name="Register"> 
+            <!--<form name="emails">    
+			 input email-->
+			<div class="form-group-material">
+                <input id="register-username" type="text"  name="email" ng-model="user"  required data-msg="Please enter your email" class="input-material">
+                <label for="register-username" class="label-material">Email:</label>
+				<span style="color:red" ng-show="Register.email.$touched && Register.email.$invalid"> Email is required.</span>				
+			</div>	
+			
+			
+
+			   
+			   <!-- input password-->
+			 <div class="form-group-material">
+                <input id="register-password" type="password" name="pass" ng-model="password" required data-msg="Please enter your password" class="input-material">
+                <label for="register-password" class="label-material">Password:       </label>
+				<span style="color:red" ng-show="Register.pass.$touched && Register.pass.$invalid"> Password is required.</span>
+              </div>
+			   <!-- input confirm password-->
+			   <div class="form-group-material">
+                <input id="register-password" type="password"   name="pass2"ng-model="password2" required data-msg="Please enter your password" class="input-material">
+                <label for="register-password" class="label-material">Confirm Password:        </label>
+				<span style="color:red" ng-show="Register.pass2.$touched && Register.pass2.$invalid ">Confirm password is required.</span>
+				 <!-- password match validation-->
+				 
+				<div ng-if="Pass != Pass2">
+
+					<span style="color:red" >Password dont match</span>
+
+				</div><div ng-if="Pass == Pass2">
+
+					<span style="color:green" ng-show=" Register.pass2.$valid ">Password match</span>
+
+				</div>
+              </div>
+			   <!-- registrtion successfully register-->
+                  <div class="logo text-uppercase text-center"  ng-show = "IsVisible"><strong class="text-primary">You have successfully registered</strong></div>
+                  
+				  <!-- submit button-->
+                  <input  id="register" class="btn btn-primary" type="button" value="Submit" ng-click="insertdata()" ng-disabled="Register.$invalid">
+               
+                </form>
+				 <!-- log in push link -->
+				<div class=" text-center d-flex align-items-center">
+				<small>Already have an account? </small><a href="login.html" class="signup">Login</a>
+          </div>
+          <!-- form footer-->
+          <div class="copyrights text-center">
+            <p>Design by <a href="#" class="external">Tsundu</a>                        </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript files
+	<script src="js/email.js">
+
+	</script>-->
+	  <script src="js/register.js">
+
+	</script>
+	<script src="js/email.js">
+
+	</script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Main File-->
+    <script src="js/front.js"></script>
+  </body>
+</html>
